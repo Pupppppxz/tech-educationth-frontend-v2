@@ -5,3 +5,4 @@
 yarn lint-staged
 
 yarn build
+yarn lint-staged
