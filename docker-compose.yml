@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "3008:3008"
+    environment:
+      - NODE_ENV=production
+    restart: always
+    networks:
+      - nginx
+
+networks:
+  nginx:
+    external:
+      name: nginx-reverse-proxy-manager_app_default
