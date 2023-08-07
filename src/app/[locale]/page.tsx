@@ -1,5 +1,7 @@
+"use client";
+
 function HomePage() {
-    return <div>HomePage</div>;
+    return <div className="text-black">HomePage</div>;
 }
 
 export default HomePage;

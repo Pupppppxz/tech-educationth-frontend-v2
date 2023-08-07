@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { locales } from "@/constants/i18n";
 
-const generateStaticParams = () =>
+const generateStaticParams = async () =>
     locales.map(locale => {
         return {
             locale,

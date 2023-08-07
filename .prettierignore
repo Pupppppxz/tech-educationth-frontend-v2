@@ -4,4 +4,6 @@ dist
 dist-ssr
 *.local
 node_modules/*
-.next
+.next/*
+.husky/*
+yarn-error.log

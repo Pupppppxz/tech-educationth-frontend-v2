@@ -1,9 +1,8 @@
 "use client";
 
-import { randomUUID } from "crypto";
 import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "next-intl/client";
-import { ChangeEvent, useTransition } from "react";
+import { ChangeEvent, useTransition, useId } from "react";
 import { locales } from "@/constants/i18n";
 import { cn } from "@/utilities";
 
@@ -12,7 +11,7 @@ function LocaleSwitcher() {
     const locale = useLocale();
     const router = useRouter();
     const pathname = usePathname();
-    const id = `language-switcher-${randomUUID()}`;
+    const id = useId();
 
     const onSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
         const nextLocale = event.target.value;
