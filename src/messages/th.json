@@ -1,5 +1,12 @@
 {
     "INDEX": {
         "hi": "สวัสดีตอนเช้า!"
+    },
+    "NAVBAR": {
+        "home-page": "หน้าหลัก",
+        "characteristic-page": "ลักษณะเฉพาะ",
+        "process-page": "ขั้นตอน",
+        "questions-page": "คำถามที่พบบ่อย",
+        "loginButton": "เข้าสู่ระบบ"
     }
 }

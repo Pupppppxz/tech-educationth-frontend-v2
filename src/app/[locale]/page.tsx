@@ -1,7 +1,13 @@
 "use client";
 
+import { Navbar } from "@/components/navs";
+
 function HomePage() {
-    return <div className="text-black">HomePage</div>;
+    return (
+        <div>
+            <Navbar />
+        </div>
+    );
 }
 
 export default HomePage;

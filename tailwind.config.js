@@ -10,6 +10,9 @@ module.exports = {
             fontFamily: {
                 application: "var(--application-font)",
             },
+            height: {
+                navbar: "120px",
+            },
         },
     },
     plugins: [],
