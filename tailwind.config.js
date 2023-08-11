@@ -13,6 +13,17 @@ module.exports = {
             height: {
                 navbar: "120px",
             },
+            colors: {
+                "main-dark-blue": "#0f1c71",
+                "main-amber": "#FFA800",
+                "main-orange": "#FF512F",
+                "main-rose": "#DD2476",
+            },
+            backgroundImage: theme => ({
+                "orange-rose-gradient": `linear-gradient(to right, ${theme(
+                    "colors.main-orange"
+                )}, ${theme("colors.main-rose")})`,
+            }),
         },
     },
     plugins: [],

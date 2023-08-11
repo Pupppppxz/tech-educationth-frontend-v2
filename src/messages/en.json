@@ -3,10 +3,16 @@
         "hi": "Good morning!"
     },
     "NAVBAR": {
-        "home-page": "หน้าหลัก",
-        "characteristic-page": "ลักษณะเฉพาะ",
-        "process-page": "ขั้นตอน",
-        "questions-page": "คำถามที่พบบ่อย",
-        "loginButton": "เข้าสู่ระบบ"
+        "home-page": "Home",
+        "characteristic-page": "Characteristic",
+        "process-page": "Process",
+        "questions-page": "Q & A",
+        "loginButton": "Login"
+    },
+    "HOME_PAGE": {
+        "testing-boundless": "การประเมินผลการเรียนไร้พรมแดน",
+        "testing-innovation": "นวัตกรรมการทดสอบเตรียม ความพร้อมสู่ “อนาคต” แห่งยุคดิจิตัล",
+        "ssn": "เลขบัตรประจำตัวประชาชน",
+        "get-started": "เริ่มต้นใช้งาน"
     }
 }

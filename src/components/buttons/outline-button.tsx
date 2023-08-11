@@ -5,10 +5,14 @@ function OutlineButton({ title, className = "", ...props }: IButton) {
     return (
         // eslint-disable-next-line react/button-has-type
         <button
-            className={cn("px-8 py-2 border-2 rounded-full", className)}
+            className={cn(
+                "group relative px-8 py-2 border-2 rounded-full overflow-hidden",
+                className
+            )}
             {...props}
         >
-            {title}
+            <div className="absolute z-[40] top-0 -left-[100%] w-full h-full bg-white transition-all group-hover:left-0" />
+            <span className="z-[100] group-hover:text-main-amber">{title}</span>
         </button>
     );
 }
