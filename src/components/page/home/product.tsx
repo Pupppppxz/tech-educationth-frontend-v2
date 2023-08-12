@@ -35,7 +35,7 @@ function Product() {
             <HomeProductImage
                 width={2000}
                 height={2000}
-                className="z-[-1] absolute top-0 left-0 object-contain opacity-50"
+                className="z-[-1] absolute -bottom-24 left-0 object-contain opacity-50"
             />
         </div>
     );

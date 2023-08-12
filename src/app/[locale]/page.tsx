@@ -1,7 +1,7 @@
 "use client";
 
 import { Navbar } from "@/components/navs";
-import { Landing, Product } from "@/components/page/home";
+import { Innovation, Landing, Product } from "@/components/page/home";
 
 function HomePage() {
     return (
@@ -9,6 +9,7 @@ function HomePage() {
             <Navbar />
             <Landing />
             <Product />
+            <Innovation />
         </div>
     );
 }
