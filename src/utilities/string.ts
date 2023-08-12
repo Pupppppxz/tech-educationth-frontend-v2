@@ -2,7 +2,7 @@ const hashEmail = (email: string): string => {
     const lenM = email.length;
     let hashed = "";
     for (let i = 0; i < lenM; i += 1) {
-        if (i < 4 || i > lenM - 5) hashed += email[i];
+        if (i < 4 || i > lenM - 5) hashed += email.at(i);
         else hashed += "*";
     }
     return hashed;
