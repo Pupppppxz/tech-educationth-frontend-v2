@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { ILogo } from "@/models/logo";
+import { ILogo, IProductLogo } from "@/models/logo";
 
 function IMEDDAT(props: ILogo) {
     return (
         <Image
-            src="/assets/images/product/IMMEDDAT.png"
+            src="/assets/images/product/IMEDDAT.png"
             alt="immeddat logo"
             {...props}
         />
@@ -43,4 +43,11 @@ function NNODAT(props: ILogo) {
     );
 }
 
-export { IMEDDAT, EDAT, AADAT, NNODAT };
+function ProductLogo({ id, ...props }: IProductLogo) {
+    if (id === "PD:IMEDDAT") return <IMEDDAT {...props} />;
+    if (id === "PD:AADAT") return <AADAT {...props} />;
+    if (id === "PD:NNODAT") return <NNODAT {...props} />;
+    return <EDAT {...props} />;
+}
+
+export { IMEDDAT, EDAT, AADAT, NNODAT, ProductLogo };

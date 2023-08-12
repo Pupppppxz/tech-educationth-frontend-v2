@@ -25,7 +25,7 @@ const LocaleLayout = async ({ children, params: { locale } }: Types) => {
     return (
         <html lang={locale}>
             <body
-                className={`${chakraPetch.variable} font-application bg-black dark:bg-main-gray`}
+                className={`${chakraPetch.variable} font-application bg-black dark:bg-main-gray m-0 p-0`}
             >
                 <AppHead />
                 <NextIntlClientProvider locale={locale} messages={messages}>

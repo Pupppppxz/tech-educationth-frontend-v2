@@ -5,3 +5,7 @@ export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
     titleClassName: string;
     theme: "white" | "blue";
 }
+
+export type IProductButton = Omit<IButton, "theme"> & {
+    isEven: boolean;
+};

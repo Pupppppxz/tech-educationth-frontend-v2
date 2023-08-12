@@ -13,4 +13,14 @@ function LandingImage(props: ILogo) {
     );
 }
 
-export { LandingImage };
+function HomeProductImage(props: ILogo) {
+    return (
+        <Image
+            src="/assets/images/home/home-product-bg.png"
+            alt="home-page-landing-graphic"
+            {...props}
+        />
+    );
+}
+
+export { LandingImage, HomeProductImage };

@@ -14,8 +14,8 @@ function HomeParticles() {
 
     return (
         <Particles
-            width="100vw"
-            height="100vh"
+            width="100dvw"
+            height="100dvh"
             style={{
                 position: "absolute",
                 top: 0,
