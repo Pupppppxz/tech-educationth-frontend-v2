@@ -1,7 +1,21 @@
 import { IButton } from "@/models/button";
 import { cn } from "@/utilities";
 
-function OutlineButton({ title, className = "", ...props }: IButton) {
+function OutlineButton({
+    title,
+    titleClassName,
+    className = "",
+    theme,
+    ...props
+}: IButton) {
+    const themeBuilder = (t: string): string => {
+        if (t === "white") {
+            return "bg-white border-4 border-white";
+        }
+
+        return "";
+    };
+
     return (
         // eslint-disable-next-line react/button-has-type
         <button
@@ -11,8 +25,20 @@ function OutlineButton({ title, className = "", ...props }: IButton) {
             )}
             {...props}
         >
-            <div className="absolute z-[40] top-0 -left-[100%] w-full h-full bg-white transition-all group-hover:left-0" />
-            <span className="z-[100] group-hover:text-main-amber">{title}</span>
+            <div
+                className={cn(
+                    "absolute z-40 top-0 -left-[100%] w-full h-full transition-all group-hover:left-0",
+                    themeBuilder(theme)
+                )}
+            />
+            <span
+                className={cn(
+                    "z-[51] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full",
+                    titleClassName
+                )}
+            >
+                {title}
+            </span>
         </button>
     );
 }

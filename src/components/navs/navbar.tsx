@@ -33,7 +33,9 @@ function Navbar() {
                         ))}
                         <OutlineButton
                             title={t("loginButton")}
-                            className="text-white group-hover:text-blue-600"
+                            className="w-36 h-12"
+                            titleClassName="text-white group-hover:text-blue-600"
+                            theme="white"
                         />
                     </ul>
                 </div>
