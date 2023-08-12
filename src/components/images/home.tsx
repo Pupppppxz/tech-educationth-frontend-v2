@@ -23,4 +23,24 @@ function HomeProductImage(props: ILogo) {
     );
 }
 
-export { LandingImage, HomeProductImage };
+function HomeReportImage(props: ILogo) {
+    return (
+        <Image
+            src="/assets/images/home/research-skill.png"
+            alt="home-page-landing-graphic"
+            {...props}
+        />
+    );
+}
+
+function HomeInnovationImage(props: ILogo) {
+    return (
+        <Image
+            src="/assets/images/home/checklist.png"
+            alt="home-page-landing-graphic"
+            {...props}
+        />
+    );
+}
+
+export { LandingImage, HomeProductImage, HomeReportImage, HomeInnovationImage };

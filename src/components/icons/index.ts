@@ -3,6 +3,7 @@ import CharacteristicIcon from "./characteristic";
 import ProcessIcon from "./process";
 import QUestionIcon from "./question";
 import BookColorIcon from "./book-color";
+import StarNoHoverIcon from "./star-nohover";
 
 export {
     HomeIcon,
@@ -10,4 +11,5 @@ export {
     ProcessIcon,
     QUestionIcon,
     BookColorIcon,
+    StarNoHoverIcon,
 };
