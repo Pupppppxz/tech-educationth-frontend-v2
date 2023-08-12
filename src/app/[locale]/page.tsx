@@ -1,13 +1,14 @@
 "use client";
 
 import { Navbar } from "@/components/navs";
-import { Landing } from "@/components/page/home";
+import { Landing, Product } from "@/components/page/home";
 
 function HomePage() {
     return (
-        <div>
+        <div className="overflow-y-scroll">
             <Navbar />
             <Landing />
+            <Product />
         </div>
     );
 }

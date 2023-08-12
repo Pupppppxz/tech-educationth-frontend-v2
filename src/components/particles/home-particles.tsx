@@ -1,54 +1,77 @@
 "use client";
 
-import React, { useCallback, useId } from "react";
-import { Engine } from "tsparticles-engine";
-import { loadSlim } from "tsparticles-slim";
 import Particles from "react-tsparticles";
+import { Engine } from "tsparticles-engine";
+import { useCallback, useId } from "react";
+import { loadFull } from "tsparticles";
 
-type Types = {
-    className: string;
-};
-
-function HomeParticles({ className }: Types) {
+function HomeParticles() {
     const particleId = useId();
+
     const particlesInit = useCallback(async (engine: Engine) => {
-        await loadSlim(engine);
+        await loadFull(engine);
     }, []);
 
     return (
         <Particles
-            className={className}
+            width="100vw"
+            height="100vh"
+            style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                zIndex: 10,
+            }}
             id={particleId}
             init={particlesInit}
             options={{
-                // background: {
-                //     color: {
-                //         value: "#0d47a1",
-                //     },
-                // },
+                fullScreen: {
+                    enable: false,
+                    zIndex: 0,
+                },
                 fpsLimit: 120,
                 interactivity: {
+                    detect_on: "window",
                     events: {
-                        onClick: {
-                            enable: true,
-                            mode: "push",
-                        },
-                        onHover: {
+                        onhover: {
                             enable: true,
                             mode: "repulse",
+                        },
+                        onclick: {
+                            enable: true,
+                            mode: "push",
                         },
                         resize: true,
                     },
                     modes: {
-                        push: {
-                            quantity: 4,
+                        grab: {
+                            distance: 140,
+                            line_linked: {
+                                opacity: 1,
+                            },
+                        },
+                        bubble: {
+                            distance: 400,
+                            size: 100,
+                            duration: 2,
+                            opacity: 8,
+                            speed: 3,
                         },
                         repulse: {
-                            distance: 200,
+                            distance: 100,
                             duration: 0.4,
+                        },
+                        push: {
+                            particles_nb: 4,
+                        },
+                        remove: {
+                            particles_nb: 2,
                         },
                     },
                 },
+                retina_detect: true,
                 particles: {
                     color: {
                         value: "#ffffff",
@@ -67,7 +90,7 @@ function HomeParticles({ className }: Types) {
                             default: "bounce",
                         },
                         random: false,
-                        speed: 1.5,
+                        speed: 2,
                         straight: false,
                     },
                     number: {
@@ -87,7 +110,6 @@ function HomeParticles({ className }: Types) {
                         value: { min: 1, max: 5 },
                     },
                 },
-                detectRetina: true,
             }}
         />
     );

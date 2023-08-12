@@ -1,15 +1,14 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import React from "react";
 import HomeParticles from "@/components/particles/home-particles";
 import { LandingImage } from "@/components/images/home";
 
 function Landing() {
-    const t = useTranslations("HOME_PAGE");
+    const t = useTranslations("HOME.LANDING");
 
     return (
-        <div className="min-w-screen min-h-screen relative flex flex-col bg-main-dark-blue">
+        <div className="w-[100dvw] h-[100dvh] overflow-hidden relative flex flex-col bg-main-dark-blue">
             <div className="container z-40 mx-auto flex-1 h-full grid grid-cols-[1fr_1.4fr]">
                 <div className="flex flex-col justify-center gap-y-6 h-full">
                     <h3 className="text-main-amber text-2xl">
@@ -40,7 +39,7 @@ function Landing() {
                     />
                 </div>
             </div>
-            <HomeParticles className="absolute" />
+            <HomeParticles />
         </div>
     );
 }
