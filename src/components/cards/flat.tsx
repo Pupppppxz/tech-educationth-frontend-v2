@@ -1,15 +1,5 @@
-import { JSX } from "react";
-import { IHoverIcon } from "@/models/icon";
+import { IFlatCardProps } from "@/models/card";
 import { cn } from "@/utilities";
-
-interface Props {
-    description: string;
-    cardClassName: string;
-    textClassName: string;
-    iconClassName?: string;
-    theme: "blue" | "amber";
-    icon?: ({ className }: IHoverIcon) => JSX.Element | undefined;
-}
 
 function FlatCard({
     description,
@@ -18,7 +8,7 @@ function FlatCard({
     theme,
     icon: Icon = undefined,
     iconClassName = undefined,
-}: Props) {
+}: IFlatCardProps) {
     return (
         <div
             className={cn(
@@ -30,7 +20,7 @@ function FlatCard({
         >
             <p
                 className={cn(
-                    "absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
+                    "flex gap-x-4 items-center absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
                     theme === "amber" && "group-hover:text-white",
                     theme === "blue" && "group-hover:text-main-dark-blue",
                     textClassName

@@ -1,4 +1,5 @@
-import { IProduct } from "@/models/card";
+import { BookIcon, GlobalIcon, PenIcon, SpeakerIcon } from "@/components/icons";
+import { IFlatCardProps, IProduct } from "@/models/card";
 
 const productList: IProduct[] = [
     {
@@ -27,4 +28,43 @@ const productList: IProduct[] = [
     },
 ];
 
-export { productList };
+const cardClassName = "h-20 rounded-full w-11/12";
+const textClassName = "text-xl left-6 w-11/12 translate-x-0";
+const iconClassName = "w-10 h-10";
+
+const LRWVList: IFlatCardProps[] = [
+    {
+        description: "reading",
+        cardClassName,
+        textClassName,
+        iconClassName,
+        icon: BookIcon,
+        theme: "blue",
+    },
+    {
+        description: "writing",
+        cardClassName,
+        textClassName,
+        iconClassName,
+        icon: PenIcon,
+        theme: "blue",
+    },
+    {
+        description: "analysis",
+        cardClassName,
+        textClassName,
+        iconClassName,
+        icon: GlobalIcon,
+        theme: "blue",
+    },
+    {
+        description: "listen",
+        cardClassName,
+        textClassName,
+        iconClassName,
+        icon: SpeakerIcon,
+        theme: "blue",
+    },
+];
+
+export { productList, LRWVList };

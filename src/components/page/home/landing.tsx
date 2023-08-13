@@ -8,7 +8,7 @@ function Landing() {
     const t = useTranslations("HOME.LANDING");
 
     return (
-        <div className="w-[100dvw] h-[100dvh] overflow-hidden relative flex flex-col bg-main-dark-blue">
+        <div className="box-screen-section relative flex flex-col bg-main-dark-blue">
             <div className="container z-40 mx-auto flex-1 h-full grid grid-cols-[1fr_1.4fr]">
                 <div className="flex flex-col justify-center gap-y-6 h-full">
                     <h3 className="text-main-amber text-2xl">

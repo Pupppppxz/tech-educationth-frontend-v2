@@ -9,7 +9,7 @@ function Report() {
     const t = useTranslations("HOME.REPORT");
 
     return (
-        <div className="overflow-hidden w-[100dvw] h-[100dvh] flex items-center">
+        <div className="box-screen-section flex items-center">
             <div className="container mx-auto w-full h-full grid grid-cols-2">
                 <div className="flex justify-end w-10/12">
                     <HomeReportImage
@@ -25,13 +25,13 @@ function Report() {
                     </div>
                     <FlatCard
                         description={t("critical")}
-                        cardClassName="w-10/12 rounded-3xl h-36"
+                        cardClassName="w-10/12 rounded-3xl h-36 cursor-pointer"
                         textClassName="text-center"
                         theme="blue"
                     />
                     <FlatCard
                         description={t("innovation")}
-                        cardClassName="w-10/12 rounded-3xl h-36"
+                        cardClassName="w-10/12 rounded-3xl h-36 cursor-pointer"
                         textClassName="text-center"
                         theme="amber"
                     />
