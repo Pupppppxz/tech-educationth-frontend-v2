@@ -1,7 +1,13 @@
 "use client";
 
 import { Navbar } from "@/components/navs";
-import { Innovation, Landing, Product, Report } from "@/components/page/home";
+import {
+    Innovation,
+    LRWV,
+    Landing,
+    Product,
+    Report,
+} from "@/components/page/home";
 
 function HomePage() {
     return (
@@ -11,6 +17,7 @@ function HomePage() {
             <Product />
             <Innovation />
             <Report />
+            <LRWV />
         </div>
     );
 }

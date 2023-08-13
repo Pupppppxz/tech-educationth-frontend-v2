@@ -58,6 +58,13 @@
             "topic": "การวัดผลและประเมิณผล",
             "critical": "หลักคิดพื้นฐานของการคิดเชิงวิพากษ์และการประยุกต์ใช้ความรู้ (Critical thinking and application of knowledge)",
             "innovation": "ทักษะการคิดเชิงนวัตกรรม (Innovative thinking skills)"
+        },
+        "LRWV": {
+            "topic": "ใช้โมเดลการวัดผล LRWV (LRWV measurement model) ในการวัดผล",
+            "reading": "การวัดผลตามทักษะสำคัญ การอ่าน (Reading)",
+            "writing": "การวัดผลตามทักษะสำคัญ เขียน (Writing) (ผ่านการเรียบเรียงการพิมพ์)",
+            "analysis": "ครั้งแรก | การวัดผลตามทักษะสำคัญ การวิเคราะห์เสมือน (Virtual Analysis)",
+            "listen": "การวัดผลตามทักษะสำคัญ การฟัง (Listening)"
         }
     }
 }

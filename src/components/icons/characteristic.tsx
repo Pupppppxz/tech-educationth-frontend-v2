@@ -1,9 +1,9 @@
 "use client";
 
 import { cn } from "@/utilities";
-import { INavbarIcon } from "@/models/icon";
+import { IHoverIcon } from "@/models/icon";
 
-function CharacteristicIcon({ className, hover }: INavbarIcon) {
+function CharacteristicIcon({ className, hover }: IHoverIcon) {
     if (!hover) {
         return (
             <svg

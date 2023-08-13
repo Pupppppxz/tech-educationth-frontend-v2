@@ -1,13 +1,24 @@
+import { JSX } from "react";
+import { IHoverIcon } from "@/models/icon";
 import { cn } from "@/utilities";
 
-type Props = {
+interface Props {
     description: string;
     cardClassName: string;
     textClassName: string;
+    iconClassName?: string;
     theme: "blue" | "amber";
-};
+    icon?: ({ className }: IHoverIcon) => JSX.Element | undefined;
+}
 
-function FlatCard({ description, cardClassName, textClassName, theme }: Props) {
+function FlatCard({
+    description,
+    cardClassName,
+    textClassName,
+    theme,
+    icon: Icon = undefined,
+    iconClassName = undefined,
+}: Props) {
     return (
         <div
             className={cn(
@@ -25,6 +36,7 @@ function FlatCard({ description, cardClassName, textClassName, theme }: Props) {
                     textClassName
                 )}
             >
+                {Icon ? <Icon className={iconClassName} /> : null}
                 {description}
             </p>
             <span
