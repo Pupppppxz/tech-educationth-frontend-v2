@@ -4,6 +4,6 @@ export interface IIcon {
     className?: ClassValue | ClassValue[];
 }
 
-export interface INavbarIcon extends IIcon {
+export interface IHoverIcon extends IIcon {
     hover?: boolean;
 }

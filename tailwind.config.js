@@ -32,6 +32,7 @@ module.exports = {
                 "blue-light-dark": `linear-gradient(to bottom, ${theme(
                     "colors.main-blue"
                 )}, ${theme("colors.main-dark-blue")})`,
+                footer: "url('/assets/images/home/home-footer-bg.png')",
             }),
         },
     },

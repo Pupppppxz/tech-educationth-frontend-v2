@@ -10,7 +10,7 @@ function Product() {
     const t = useTranslations("HOME.PRODUCTS");
 
     return (
-        <div className="relative overflow-hidden w-[100dvw] h-[100dvh]">
+        <div className="relative box-screen-section">
             <div className="z-20 container w-full h-full mx-auto flex flex-col items-center justify-center gap-y-4">
                 <h1 className="text-4xl font-bold text-main-dark-blue">
                     {t("topic")}

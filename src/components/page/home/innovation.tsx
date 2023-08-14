@@ -7,7 +7,7 @@ function Innovation() {
     const t = useTranslations("HOME.INNOVATION");
 
     return (
-        <div className="overflow-hidden w-[100dvw] h-[100dvh] flex items-center">
+        <div className="box-screen-section flex items-center">
             <div
                 className={`container mx-auto w-full h-fit flex flex-col gap-y-8 justify-center 
                 items-center p-16 bg-main-dark-blue rounded-3xl`}

@@ -1,13 +1,14 @@
+import { IFlatCardProps } from "@/models/card";
 import { cn } from "@/utilities";
 
-type Props = {
-    description: string;
-    cardClassName: string;
-    textClassName: string;
-    theme: "blue" | "amber";
-};
-
-function FlatCard({ description, cardClassName, textClassName, theme }: Props) {
+function FlatCard({
+    description,
+    cardClassName,
+    textClassName,
+    theme,
+    icon: Icon = undefined,
+    iconClassName = undefined,
+}: IFlatCardProps) {
     return (
         <div
             className={cn(
@@ -19,12 +20,13 @@ function FlatCard({ description, cardClassName, textClassName, theme }: Props) {
         >
             <p
                 className={cn(
-                    "absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
+                    "flex gap-x-4 items-center absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
                     theme === "amber" && "group-hover:text-white",
                     theme === "blue" && "group-hover:text-main-dark-blue",
                     textClassName
                 )}
             >
+                {Icon ? <Icon className={iconClassName} /> : null}
                 {description}
             </p>
             <span

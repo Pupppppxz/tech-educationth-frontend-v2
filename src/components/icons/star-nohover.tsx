@@ -1,9 +1,9 @@
 "use client";
 
 import { cn } from "@/utilities";
-import { INavbarIcon } from "@/models/icon";
+import { IHoverIcon } from "@/models/icon";
 
-function StarNoHoverIcon({ className }: INavbarIcon) {
+function StarNoHoverIcon({ className }: IHoverIcon) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"

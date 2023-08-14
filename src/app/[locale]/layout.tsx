@@ -2,14 +2,13 @@
 
 import { NextIntlClientProvider } from "next-intl";
 import { Chakra_Petch as ChakraPetch } from "next/font/google";
-import { ReactNode } from "react";
+import { PropsWithChildren } from "react";
 import { getMessages } from "@/utilities";
 import { Providers } from "@/components/theme";
 import { AppHead } from "@/components/common";
 import "./globals.css";
 
-type Types = {
-    children: ReactNode;
+type Types = PropsWithChildren & {
     params: { locale: string };
 };
 
@@ -19,7 +18,10 @@ const chakraPetch = ChakraPetch({
     variable: "--application-font",
 });
 
-const LocaleLayout = async ({ children, params: { locale } }: Types) => {
+const LocaleLayout = async ({
+    children = undefined,
+    params: { locale = "th" },
+}: Types) => {
     const messages = await getMessages(locale);
 
     return (
@@ -29,7 +31,7 @@ const LocaleLayout = async ({ children, params: { locale } }: Types) => {
             >
                 <AppHead />
                 <NextIntlClientProvider locale={locale} messages={messages}>
-                    <Providers>{children}</Providers>
+                    <Providers>{children || null}</Providers>
                 </NextIntlClientProvider>
             </body>
         </html>
