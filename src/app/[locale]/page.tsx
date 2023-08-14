@@ -7,6 +7,7 @@ import {
     Landing,
     Product,
     Report,
+    Teacher,
 } from "@/components/page/home";
 
 function HomePage() {
@@ -18,6 +19,7 @@ function HomePage() {
             <Innovation />
             <Report />
             <LRWV />
+            <Teacher />
         </div>
     );
 }
