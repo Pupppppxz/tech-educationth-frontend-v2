@@ -1,5 +1,14 @@
 import { BookIcon, GlobalIcon, PenIcon, SpeakerIcon } from "@/components/icons";
+import {
+    AADAT,
+    BSDAT,
+    EDAT,
+    IMEDDAT,
+    NNODAT,
+    PEDAT,
+} from "@/components/images/product";
 import { IFlatCardProps, IProduct, ITeacherCardProps } from "@/models/card";
+import { IFooterProduct, IFooterUseFullLink } from "@/models/nav";
 
 const productList: IProduct[] = [
     {
@@ -96,4 +105,60 @@ const teacher: ITeacherCardProps = {
 };
 const teacherList: ITeacherCardProps[] = [teacher, teacher, teacher];
 
-export { productList, LRWVList, teacherList };
+const useFullLinkList: IFooterUseFullLink[] = [
+    {
+        title: "useFullLink.main",
+        path: "/",
+    },
+    {
+        title: "useFullLink.testing",
+        path: "/",
+    },
+    {
+        title: "useFullLink.manual",
+        path: "/",
+    },
+    {
+        title: "useFullLink.scope",
+        path: "/",
+    },
+    {
+        title: "useFullLink.about",
+        path: "/",
+    },
+];
+
+const productFooterList: IFooterProduct[] = [
+    {
+        path: "",
+        icon: IMEDDAT,
+    },
+    {
+        path: "",
+        icon: AADAT,
+    },
+    {
+        path: "",
+        icon: EDAT,
+    },
+    {
+        path: "",
+        icon: NNODAT,
+    },
+    {
+        path: "",
+        icon: PEDAT,
+    },
+    {
+        path: "",
+        icon: BSDAT,
+    },
+];
+
+export {
+    productList,
+    LRWVList,
+    teacherList,
+    useFullLinkList,
+    productFooterList,
+};

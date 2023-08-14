@@ -4,5 +4,6 @@ import Innovation from "./innovation";
 import Report from "./report";
 import LRWV from "./lrwv";
 import Teacher from "./teacher";
+import Footer from "./footer";
 
-export { Landing, Product, Innovation, Report, LRWV, Teacher };
+export { Landing, Product, Innovation, Report, LRWV, Teacher, Footer };

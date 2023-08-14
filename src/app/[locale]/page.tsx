@@ -2,6 +2,7 @@
 
 import { Navbar } from "@/components/navs";
 import {
+    Footer,
     Innovation,
     LRWV,
     Landing,
@@ -20,6 +21,7 @@ function HomePage() {
             <Report />
             <LRWV />
             <Teacher />
+            <Footer />
         </div>
     );
 }

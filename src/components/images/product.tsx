@@ -43,6 +43,26 @@ function NNODAT(props: ILogo) {
     );
 }
 
+function PEDAT(props: ILogo) {
+    return (
+        <Image
+            src="/assets/images/product/PEDAT.png"
+            alt="pedat logo"
+            {...props}
+        />
+    );
+}
+
+function BSDAT(props: ILogo) {
+    return (
+        <Image
+            src="/assets/images/product/BSDAT.png"
+            alt="bsdat logo"
+            {...props}
+        />
+    );
+}
+
 function ProductLogo({ id, ...props }: IProductLogo) {
     if (id === "PD:IMEDDAT") return <IMEDDAT {...props} />;
     if (id === "PD:AADAT") return <AADAT {...props} />;
@@ -50,4 +70,4 @@ function ProductLogo({ id, ...props }: IProductLogo) {
     return <EDAT {...props} />;
 }
 
-export { IMEDDAT, EDAT, AADAT, NNODAT, ProductLogo };
+export { IMEDDAT, EDAT, AADAT, NNODAT, ProductLogo, PEDAT, BSDAT };
