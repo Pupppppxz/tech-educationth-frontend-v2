@@ -20,13 +20,17 @@ function Navbar() {
     };
 
     const changeNavbarColor = () => {
-        if (window.scrollY >= 80) {
-            setColorChange(true);
-        } else {
-            setColorChange(false);
+        if (typeof window !== "undefined") {
+            if (window?.scrollY >= 80) {
+                setColorChange(true);
+            } else {
+                setColorChange(false);
+            }
         }
     };
-    window.addEventListener("scroll", changeNavbarColor);
+
+    if (typeof window !== "undefined")
+        window.addEventListener("scroll", changeNavbarColor);
 
     return (
         <div
@@ -80,7 +84,7 @@ function Navbar() {
                     <div
                         role="none"
                         className={cn(
-                            "w-fit h-fit",
+                            "w-fit h-fit lg:hidden",
                             isOpen && "absolute top-6 right-4"
                         )}
                         onClick={() => onToggleNavbar()}
