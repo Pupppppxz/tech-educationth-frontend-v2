@@ -10,7 +10,7 @@ function Innovation() {
         <div className="md:box-screen-section flex items-center p-4 md:p-0">
             <div
                 className="container mx-auto w-full h-fit flex flex-col gap-y-8 justify-center 
-                items-center p-4 py-10 lg:py-16 md:p-8 lg:p-16 bg-main-dark-blue rounded-3xl"
+                items-center p-4 py-10 lg:py-16 md:p-8 lg:p-16 bg-main-dark-blue rounded-3xl shadow-main-1"
             >
                 <BookColorIcon />
                 <h3 className="text-3xl md:text-4xl font-bold text-center">

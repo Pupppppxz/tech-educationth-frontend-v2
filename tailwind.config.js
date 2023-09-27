@@ -43,6 +43,7 @@ module.exports = {
             }),
             boxShadow: {
                 "main-1": "0 35px 20px -15px rgba(0, 0, 0, 0.2)",
+                "main-2": "0 5px 15px -15px rgba(0, 0, 0, 0.2)",
             },
         },
     },
