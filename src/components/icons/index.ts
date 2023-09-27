@@ -14,6 +14,7 @@ import PhoneIcon from "./phone";
 import PinIcon from "./pin";
 import CloseIcon from "./close";
 import HamburgerIcon from "./hamburger";
+import ArrowLeftNoHoverIcon from "./arrow-left-no-hover";
 
 export {
     HomeIcon,
@@ -32,4 +33,5 @@ export {
     PinIcon,
     CloseIcon,
     HamburgerIcon,
+    ArrowLeftNoHoverIcon,
 };

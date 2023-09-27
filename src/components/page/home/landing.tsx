@@ -9,7 +9,7 @@ function Landing() {
     const t = useTranslations("HOME.LANDING");
 
     return (
-        <div className="lg:box-screen-section relative flex flex-col bg-main-dark-blue">
+        <div className="lg:box-screen-section overflow-hidden relative flex flex-col bg-main-dark-blue">
             <div className="container z-40 mx-auto flex-1 h-full flex flex-col-reverse pt-24 lg:pt-0 lg:grid lg:grid-cols-[1fr_1.4fr]">
                 <div className="flex flex-col justify-center gap-y-6 w-full h-fit lg:h-full p-6 pb-10 md:pb-4 lg:pb-0 md:p-4 lg:p-0">
                     <h3 className="text-main-amber text-lg md:text-2xl">

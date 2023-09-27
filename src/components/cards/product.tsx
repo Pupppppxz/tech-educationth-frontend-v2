@@ -4,7 +4,7 @@ import { cn } from "@/utilities";
 import { ProductButton } from "../buttons";
 import { ProductLogo } from "../images/product";
 
-interface Types extends IProduct {
+interface ProductCardProps extends IProduct {
     buttonTitle: string;
     isEven: boolean;
 }
@@ -16,7 +16,7 @@ function ProductCard({
     id,
     buttonTitle,
     isEven,
-}: Types) {
+}: ProductCardProps) {
     return (
         <div
             className={cn(
