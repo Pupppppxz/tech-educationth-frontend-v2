@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { productList } from "@/constants/home";
 import { IProduct } from "@/models/card";
 import { HomeProductImage } from "@/components/images/home";
@@ -12,6 +12,7 @@ import {
     ArrowRightNoHoverIcon,
 } from "@/components/icons";
 
+const INTERVAL_TIMER = 4000;
 function Product() {
     const t = useTranslations("HOME.PRODUCTS");
     const [currentProduct, setCurrentProduct] = useState<number>(0);
@@ -23,6 +24,16 @@ function Product() {
             return prev + step;
         });
     };
+
+    useEffect(() => {
+        const sliderInterval = setInterval(() => {
+            onCurrentProductChange(1);
+        }, INTERVAL_TIMER);
+
+        return () => {
+            clearInterval(sliderInterval);
+        };
+    }, []);
 
     return (
         <div className="relative md:box-screen-section">
