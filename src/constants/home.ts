@@ -38,7 +38,7 @@ const productList: IProduct[] = [
 ];
 
 const cardClassName = "h-20 rounded-full w-11/12";
-const textClassName = "text-xl left-6 w-11/12 translate-x-0";
+const textClassName = "text-lg md:text-xl left-6 w-11/12 translate-x-0";
 const iconClassName = "w-8 h-8";
 
 const LRWVList: IFlatCardProps[] = [
