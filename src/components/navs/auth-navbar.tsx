@@ -8,10 +8,10 @@ import { navbarItems } from "@/constants/nav";
 import { INavbar } from "@/models/nav";
 import { cn } from "@/utilities";
 import { CloseIcon, HamburgerIcon } from "@/components/icons";
-import { TecheducationWhiteLogo } from "@/components/logos";
-import { OutlineButton } from "@/components/buttons";
+import { TecheducationLogo, TecheducationWhiteLogo } from "@/components/logos";
+import { FlatButton } from "@/components/buttons";
 
-function Navbar() {
+function AuthNavbar() {
     const t = useTranslations("NAVBAR");
     const router = useRouter();
     const [colorChange, setColorChange] = useState<boolean>(false);
@@ -56,12 +56,20 @@ function Navbar() {
                             "flex-col justify-center !h-[100dvh] gap-y-16 z-[52]"
                     )}
                 >
-                    <TecheducationWhiteLogo
+                    <TecheducationLogo
                         width={500}
                         height={500}
                         className={cn(
                             "w-auto h-10 md:h-12 object-contain cursor-pointer",
-                            isOpen && "h-12"
+                            isOpen && "hidden"
+                        )}
+                    />
+                    <TecheducationWhiteLogo
+                        width={500}
+                        height={500}
+                        className={cn(
+                            "w-auto h-12 object-contain cursor-pointer",
+                            !isOpen && "hidden"
                         )}
                     />
                     <ul
@@ -76,17 +84,27 @@ function Navbar() {
                                 key={nav.title}
                                 href={nav.path}
                             >
-                                <li className="w-fit text-white cursor-pointer">
+                                <li
+                                    className={cn(
+                                        "w-fit text-main-dark-blue cursor-pointer",
+                                        isOpen && "text-white"
+                                    )}
+                                >
                                     {t(nav.title)}
                                 </li>
-                                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-white transition-all group-hover:w-full" />
+                                <span
+                                    className={cn(
+                                        "absolute -bottom-1 left-0 w-0 h-[2px] bg-main-dark-blue transition-all group-hover:w-full",
+                                        isOpen && "bg-white"
+                                    )}
+                                />
                             </Link>
                         ))}
-                        <OutlineButton
+                        <FlatButton
                             title={t("loginButton")}
                             className="w-36 h-12"
-                            titleClassName="text-white group-hover:text-main-dark-blue"
-                            theme="white"
+                            titleClassName=""
+                            theme={isOpen ? "white" : "blue"}
                             onClick={onLoginButtonClick}
                         />
                     </ul>
@@ -101,7 +119,7 @@ function Navbar() {
                         {isOpen ? (
                             <CloseIcon className="text-white cursor-pointer" />
                         ) : (
-                            <HamburgerIcon className="text-white cursor-pointer" />
+                            <HamburgerIcon className="text-main-dark-blue cursor-pointer" />
                         )}
                     </div>
                 </div>
@@ -110,4 +128,4 @@ function Navbar() {
     );
 }
 
-export default Navbar;
+export default AuthNavbar;

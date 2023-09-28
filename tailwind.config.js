@@ -40,10 +40,12 @@ module.exports = {
                     "colors.main-dark-blue"
                 )})`,
                 footer: "url('/assets/images/home/home-footer-bg.png')",
+                auth: "url('/assets/images/auth/auth-bg.png')",
             }),
             boxShadow: {
                 "main-1": "0 35px 20px -15px rgba(0, 0, 0, 0.2)",
                 "main-2": "0 5px 15px -15px rgba(0, 0, 0, 0.2)",
+                "main-3": "0 8px 30px rgb(0, 0, 0, 0.16)",
             },
         },
     },
