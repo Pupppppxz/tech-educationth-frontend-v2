@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "next dev",
+        "dev": "next -p 3002",
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
@@ -17,8 +17,6 @@
         "@types/react-dom": "18.2.6",
         "autoprefixer": "10.4.14",
         "clsx": "^2.0.0",
-        "embla-carousel-autoplay": "^8.0.0-rc11",
-        "embla-carousel-react": "^8.0.0-rc11",
         "eslint": "8.43.0",
         "eslint-config-next": "13.4.7",
         "next": "13.4.7",

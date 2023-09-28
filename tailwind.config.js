@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
@@ -11,10 +12,11 @@ module.exports = {
                 application: "var(--application-font)",
             },
             height: {
-                navbar: "120px",
+                navbar: "5rem",
             },
             colors: {
                 "main-dark-blue": "#0f1c71",
+                "main-darkest-blue": "#0b1347",
                 "main-blue": "#1D31DD",
                 "main-amber": "#FFA800",
                 "main-orange": "#FF512F",
@@ -32,8 +34,17 @@ module.exports = {
                 "blue-light-dark": `linear-gradient(to bottom, ${theme(
                     "colors.main-blue"
                 )}, ${theme("colors.main-dark-blue")})`,
+                "blue-dark-light-dark": `linear-gradient(to bottom, ${theme(
+                    "colors.main-dark-blue"
+                )}, ${theme("colors.main-darkest-blue")}, ${theme(
+                    "colors.main-dark-blue"
+                )})`,
                 footer: "url('/assets/images/home/home-footer-bg.png')",
             }),
+            boxShadow: {
+                "main-1": "0 35px 20px -15px rgba(0, 0, 0, 0.2)",
+                "main-2": "0 5px 15px -15px rgba(0, 0, 0, 0.2)",
+            },
         },
     },
     plugins: [],

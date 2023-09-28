@@ -6,9 +6,10 @@ import { PropsWithChildren } from "react";
 import { getMessages } from "@/utilities";
 import { Providers } from "@/components/theme";
 import { AppHead } from "@/components/common";
+
 import "./globals.css";
 
-type Types = PropsWithChildren & {
+type LocaleLayoutProps = PropsWithChildren & {
     params: { locale: string };
 };
 
@@ -19,9 +20,9 @@ const chakraPetch = ChakraPetch({
 });
 
 const LocaleLayout = async ({
-    children = undefined,
+    children,
     params: { locale = "th" },
-}: Types) => {
+}: LocaleLayoutProps) => {
     const messages = await getMessages(locale);
 
     return (

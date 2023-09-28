@@ -18,7 +18,7 @@ function FlatCard({
                 cardClassName
             )}
         >
-            <p
+            <div
                 className={cn(
                     "flex gap-x-4 items-center absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
                     theme === "amber" && "group-hover:text-white",
@@ -28,7 +28,7 @@ function FlatCard({
             >
                 {Icon ? <Icon className={iconClassName} /> : null}
                 {description}
-            </p>
+            </div>
             <span
                 className={cn(
                     "absolute top-0 left-0 h-full w-0 transition-all group-hover:w-full",
