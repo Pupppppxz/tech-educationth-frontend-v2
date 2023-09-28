@@ -50,13 +50,13 @@ function Teacher() {
                 </p>
                 <div
                     className={cn(
-                        "grid grid-cols-[30px_1fr_30px] px-4 gap-x-2 place-items-center",
-                        teacherList.length === 3 && "lg:grid-cols-1",
+                        "w-full grid grid-cols-[30px_1fr_30px] px-4 gap-x-2 place-items-center",
+                        teacherList.length === 3 && "xl:grid-cols-1",
                         currentTeacher === 0 && "md:grid-cols-[1fr_30px]",
                         currentTeacher === teacherList.length - 2 &&
                             "md:grid-cols-[30px_1fr]",
                         currentTeacher === teacherList.length - 3 &&
-                            "lg:grid-cols-[30px_1fr]"
+                            "xl:grid-cols-[30px_1fr]"
                     )}
                 >
                     <div
@@ -70,7 +70,7 @@ function Teacher() {
                                 "md:hidden",
                             (teacherList.length === 3 ||
                                 currentTeacher === 0) &&
-                                "lg:hidden"
+                                "xl:hidden"
                         )}
                     >
                         <ArrowLeftNoHoverIcon />
@@ -93,7 +93,7 @@ function Teacher() {
                             )
                         )}
                     </div>
-                    <div className="hidden md:grid md:grid-cols-2 lg:hidden w-full gap-x-4">
+                    <div className="hidden md:grid md:grid-cols-2 xl:hidden w-full gap-x-4">
                         {teacherList?.map(
                             (teacher: ITeacherCardProps, index: number) => (
                                 <TeacherCard
@@ -114,7 +114,7 @@ function Teacher() {
                             )
                         )}
                     </div>
-                    <div className="hidden lg:grid lg:grid-cols-3 w-full gap-x-4">
+                    <div className="hidden xl:grid xl:grid-cols-3 w-full gap-x-4">
                         {teacherList?.map(
                             (teacher: ITeacherCardProps, index: number) => (
                                 <TeacherCard
@@ -145,7 +145,7 @@ function Teacher() {
                                 "md:hidden",
                             (teacherList.length === 3 ||
                                 currentTeacher === teacherList.length - 3) &&
-                                "lg:hidden"
+                                "xl:hidden"
                         )}
                     >
                         <ArrowRightNoHoverIcon />
