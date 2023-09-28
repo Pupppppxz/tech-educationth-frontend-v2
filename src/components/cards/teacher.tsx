@@ -34,7 +34,7 @@ function TeacherCard({
             >
                 <span
                     className={cn(
-                        "flex items-center px-4 pt-1 bg-white rounded-full mt-16 font-semibold text-black",
+                        "flex items-center px-4 pt-1 bg-white rounded-full mt-10 sm:mt-16 font-semibold text-black",
                         isEven && "text-white bg-main-dark-blue"
                     )}
                 >
