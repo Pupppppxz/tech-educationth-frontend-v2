@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { ClassValue } from "clsx";
 import { ITeacherCardProps } from "@/models/card";
 import { ITeacherEducation } from "@/models/teacher";
 import { cn } from "@/utilities";
@@ -8,6 +9,7 @@ import { BookIcon } from "../icons";
 
 type TeacherProps = ITeacherCardProps & {
     isEven: boolean;
+    className?: ClassValue;
 };
 
 function TeacherCard({
@@ -15,9 +17,15 @@ function TeacherCard({
     profilePictureURL,
     educations,
     isEven,
+    className,
 }: TeacherProps) {
     return (
-        <div className="group relative flex justify-center w-full h-[600px] transition-all duration-500">
+        <div
+            className={cn(
+                "group relative flex justify-center w-full h-[600px] transition-all duration-500",
+                className
+            )}
+        >
             <div
                 className={cn(
                     "z-20 relative flex flex-col items-center w-10/12 gap-y-2 mt-[25%] bg-main-orange rounded-3xl px-4 py-16",
