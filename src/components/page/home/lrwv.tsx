@@ -12,7 +12,7 @@ function LRWV() {
     return (
         <div className="lg:box-screen-section bg-main-dark-blue">
             <div className="container mx-auto flex flex-col-reverse items-center lg:grid lg:grid-cols-2 h-full py-20 md:py-16 lg:py-0">
-                <div className="flex flex-col justify-center h-full gap-y-4">
+                <div className="flex flex-col items-center lg:items-start justify-center h-full gap-y-4">
                     <h1 className="w-full lg:w-9/12 mb-4 px-3 md:px-0 text-2xl md:text-3xl font-bold text-center text-main-amber">
                         {t("topic")}
                     </h1>

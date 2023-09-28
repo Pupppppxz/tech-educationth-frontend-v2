@@ -33,7 +33,7 @@ function Footer() {
                             {t("company.description")}
                         </p>
                     </div>
-                    <div className="flex flex-col md:grid md:grid-cols-2">
+                    <div className="flex flex-col gap-y-6 md:grid md:grid-cols-2">
                         <div className="flex flex-col gap-y-4 p-4">
                             <h1 className="font-semibold text-xl tracking-wide">
                                 {t("useFullLink.title")}

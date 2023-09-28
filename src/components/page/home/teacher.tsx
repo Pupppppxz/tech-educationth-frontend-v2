@@ -28,9 +28,13 @@ function Teacher() {
         const result: number[] = [];
         let current = currentTeacher;
         for (let i = 0; i < total; i += 1) {
-            if (current === numberOfTeacher - 1) result.push(0);
-            else result.push(current + 1);
-            current += 1;
+            if (current === numberOfTeacher - 1) {
+                result.push(0);
+                current = 0;
+            } else {
+                result.push(current + 1);
+                current += 1;
+            }
         }
         return result;
     };
@@ -47,7 +51,12 @@ function Teacher() {
                 <div
                     className={cn(
                         "grid grid-cols-[30px_1fr_30px] px-4 gap-x-2 place-items-center",
-                        teacherList.length === 3 && "lg:grid-cols-1"
+                        teacherList.length === 3 && "lg:grid-cols-1",
+                        currentTeacher === 0 && "md:grid-cols-[1fr_30px]",
+                        currentTeacher === teacherList.length - 2 &&
+                            "md:grid-cols-[30px_1fr]",
+                        currentTeacher === teacherList.length - 3 &&
+                            "lg:grid-cols-[30px_1fr]"
                     )}
                 >
                     <div
@@ -55,7 +64,13 @@ function Teacher() {
                         onClick={() => onCurrentTeacherChange(-1)}
                         className={cn(
                             "w-full flex items-center justify-center cursor-pointer aspect-square bg-main-amber rounded-full",
-                            teacherList.length === 3 && "lg:hidden"
+                            (teacherList.length === 2 ||
+                                currentTeacher === 0) &&
+                                teacherList.length !== 3 &&
+                                "md:hidden",
+                            (teacherList.length === 3 ||
+                                currentTeacher === 0) &&
+                                "lg:hidden"
                         )}
                     >
                         <ArrowLeftNoHoverIcon />
@@ -125,7 +140,12 @@ function Teacher() {
                         onClick={() => onCurrentTeacherChange(1)}
                         className={cn(
                             "w-full flex items-center justify-center cursor-pointer aspect-square bg-main-amber rounded-full",
-                            teacherList.length === 3 && "lg:hidden"
+                            (teacherList.length === 2 ||
+                                currentTeacher === teacherList.length - 2) &&
+                                "md:hidden",
+                            (teacherList.length === 3 ||
+                                currentTeacher === teacherList.length - 3) &&
+                                "lg:hidden"
                         )}
                     >
                         <ArrowRightNoHoverIcon />

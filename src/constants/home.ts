@@ -103,7 +103,13 @@ const teacher: ITeacherCardProps = {
         },
     ],
 };
-const teacherList: ITeacherCardProps[] = [teacher, teacher, teacher];
+const teacherList: ITeacherCardProps[] = [
+    { ...teacher, name: "ดร.วศิทธิ์ ศิริลาภอนันต์ 1" },
+    { ...teacher, name: "ดร.วศิทธิ์ ศิริลาภอนันต์ 2" },
+    { ...teacher, name: "ดร.วศิทธิ์ ศิริลาภอนันต์ 3" },
+    { ...teacher, name: "ดร.วศิทธิ์ ศิริลาภอนันต์ 4" },
+    { ...teacher, name: "ดร.วศิทธิ์ ศิริลาภอนันต์ 5" },
+];
 
 const useFullLinkList: IFooterUseFullLink[] = [
     {
