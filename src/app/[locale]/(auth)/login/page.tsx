@@ -15,13 +15,17 @@ function Login() {
     const router = useRouter();
 
     return (
-        <div className="relative w-full h-full grid grid-cols-2 p-20">
-            <div className="flex items-center justify-center">
+        <div className="relative w-full h-full flex flex-col lg:grid lg:grid-cols-2 p-4 md:p-12 lg:p-20">
+            <div className="hidden lg:flex items-center justify-center">
                 <LoginImage width={1000} height={1000} className="w-9/12" />
             </div>
-            <div className="flex flex-col justify-center gap-y-3 text-black">
-                <Title>{t("title")}</Title>
-                <h3>{t("description")}</h3>
+            <div className="flex flex-col justify-center h-full w-full gap-y-3 text-black">
+                <Title className="text-center lg:text-start">
+                    {t("title")}
+                </Title>
+                <h3 className="text-center lg:text-start">
+                    {t("description")}
+                </h3>
                 <Formik
                     initialValues={{
                         username: "",
@@ -49,31 +53,31 @@ function Login() {
                             icon={PasswordIcon}
                             iconClassName="text-main-dark-blue"
                         />
-                        <div className="flex gap-x-4 mt-4">
+                        <div className="flex flex-col md:flex-row gap-4 mt-4">
                             <FlatButton
                                 type="submit"
                                 title={t("loginButton")}
-                                className="w-36 h-12"
+                                className="w-full md:w-36 h-12"
                                 titleClassName=""
                                 theme="blue"
                             />
                             <FlatButton
                                 type="reset"
                                 title={t("forgotPasswordButton")}
-                                className="w-44 h-12 border-main-dark-blue"
+                                className="w-full md:w-44 h-12 border-main-dark-blue"
                                 titleClassName=""
                                 theme="white"
                             />
                         </div>
+                        <Link
+                            href="/register"
+                            className="md:absolute md:top-8 md:right-12 lg:top-12 lg:right-20 text-center text-main-dark-blue"
+                        >
+                            {t("registerButton")}
+                        </Link>
                     </div>
                 </Formik>
             </div>
-            <Link
-                href="/register"
-                className="absolute top-12 right-20 text-main-dark-blue"
-            >
-                {t("registerButton")}
-            </Link>
         </div>
     );
 }

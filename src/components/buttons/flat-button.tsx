@@ -62,7 +62,7 @@ function FlatButton({
             />
             <span
                 className={cn(
-                    "z-[51] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full",
+                    "z-[41] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full",
                     textBuilder(theme),
                     titleClassName
                 )}

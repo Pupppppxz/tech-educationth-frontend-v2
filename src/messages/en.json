@@ -98,7 +98,7 @@
             "password": "Password",
             "loginButton": "Submit",
             "forgotPasswordButton": "Forgot Password",
-            "registerButton": "Register"
+            "registerButton": "Don't have an account? Register"
         }
     }
 }
