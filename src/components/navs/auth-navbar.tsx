@@ -51,7 +51,7 @@ function AuthNavbar() {
             <div className="container mx-auto">
                 <div
                     className={cn(
-                        "flex w-auto justify-between items-center h-navbar px-3 text-black transition-all duration-500 ease-in-out",
+                        "flex w-auto justify-between items-center h-navbar px-3 text-black transition-all duration-700 ease-in-out",
                         isOpen &&
                             "flex-col justify-center !h-[100dvh] gap-y-16 z-[52]"
                     )}
@@ -94,7 +94,7 @@ function AuthNavbar() {
                                 </li>
                                 <span
                                     className={cn(
-                                        "absolute -bottom-1 left-0 w-0 h-[2px] bg-main-dark-blue transition-all group-hover:w-full",
+                                        "absolute -bottom-1 left-0 w-0 h-[2px] bg-main-dark-blue transition-all duration-700 group-hover:w-full",
                                         isOpen && "bg-white"
                                     )}
                                 />

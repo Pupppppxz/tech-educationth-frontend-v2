@@ -56,7 +56,7 @@ function FlatButton({
         >
             <div
                 className={cn(
-                    "absolute z-40 top-0 -left-[100%] w-full h-full transition-all group-hover:left-0",
+                    "absolute z-40 top-0 -left-[100%] w-full h-full transition-all duration-500 group-hover:left-0",
                     hoverBuilder(theme)
                 )}
             />

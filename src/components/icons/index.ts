@@ -15,6 +15,8 @@ import PinIcon from "./pin";
 import CloseIcon from "./close";
 import HamburgerIcon from "./hamburger";
 import ArrowLeftNoHoverIcon from "./arrow-left-no-hover";
+import UserIcon from "./user";
+import PasswordIcon from "./password";
 
 export {
     HomeIcon,
@@ -34,4 +36,6 @@ export {
     CloseIcon,
     HamburgerIcon,
     ArrowLeftNoHoverIcon,
+    UserIcon,
+    PasswordIcon,
 };

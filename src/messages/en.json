@@ -89,5 +89,16 @@
                 "address": "บริษัท เทค อินฟินิตี้ อีดูเคชั่น จำกัด\n1 อาคารเอ็มไพร์ ชั้น 47 ยูนิต 4708\nถนนสาทรใต้ แขวงยานนาวา\nเขตสาทรกรุงเทมพมหานคร 10120\nประเทศไทย"
             }
         }
+    },
+    "AUTH": {
+        "LOGIN": {
+            "title": "Welcome",
+            "description": "Authentication by User and Password",
+            "username": "Email Or Social Security Number",
+            "password": "Password",
+            "loginButton": "Submit",
+            "forgotPasswordButton": "Forgot Password",
+            "registerButton": "Register"
+        }
     }
 }
