@@ -99,6 +99,52 @@
             "loginButton": "Submit",
             "forgotPasswordButton": "Forgot Password",
             "registerButton": "Don't have an account? Register"
+        },
+        "REGISTER": {
+            "title": "Register",
+            "description": "Fill in all information to proceed.",
+            "country": {
+                "step-title": "Country",
+                "step-description": "Country you are studying in",
+                "title": "Select country where you studying in.",
+                "label1": "Select country",
+                "placeholder1": "-- Please select country where you studying in --"
+            },
+            "authentication": {
+                "step-title": "Authentication",
+                "step-description": "Social Security Number",
+                "title": ""
+            },
+            "school": {
+                "step-title": "School",
+                "step-description": "The school you are studying at"
+            },
+            "personalInfo": {
+                "step-title": "Personal Information",
+                "step-description": "Your personal information"
+            },
+            "contact": {
+                "step-title": "Contact information",
+                "step-description": "Your contact information"
+            },
+            "confirmation": {
+                "step-title": "Confirm by Email",
+                "step-description": "Confirm your registration with OTP code"
+            },
+            "steps": {
+                "step1": "ขั้นตอนที่ 1/6",
+                "step2": "ขั้นตอนที่ 2/6",
+                "step3": "ขั้นตอนที่ 3/6",
+                "step4": "ขั้นตอนที่ 4/6",
+                "step5": "ขั้นตอนที่ 5/6",
+                "step6": "ขั้นตอนที่ 6/6"
+            },
+            "button": {
+                "next": "Next",
+                "previous": "Previous",
+                "confirm": "Confirm",
+                "otp": "OTP not sent?"
+            }
         }
     }
 }

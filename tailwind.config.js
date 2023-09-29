@@ -23,6 +23,8 @@ module.exports = {
                 "main-rose": "#DD2476",
                 "main-gray": "#f0f0f0",
                 "main-dark-gray": "#474747",
+                "main-gray-2": "#878787",
+                "main-light-gray": "#ADADAD",
             },
             backgroundImage: theme => ({
                 "orange-rose-gradient": `linear-gradient(to right, ${theme(
