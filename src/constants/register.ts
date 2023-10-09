@@ -6,6 +6,7 @@ import {
     UserInfoNoHoverIcon,
     WorldNoHoverIcon,
 } from "@/components/icons";
+import { IFormOption } from "@/models/local/form";
 import { IRegisterStepperItem } from "@/models/local/register";
 
 const registerStepperList: IRegisterStepperItem[] = [
@@ -41,4 +42,48 @@ const registerStepperList: IRegisterStepperItem[] = [
     },
 ];
 
-export { registerStepperList };
+const selectCountryLabels: IFormOption[] = [
+    {
+        label: "ประเทศไทย | Thailand",
+        value: "Thailand",
+    },
+];
+
+const selectVerificationType: IFormOption[] = [
+    {
+        label: "หมายเลขบัตรประชาชน | SSN",
+        value: "SSN",
+    },
+    {
+        label: "หมายเลขพาสปอร์ต | Passport",
+        value: "Passport",
+    },
+];
+
+const selectSchoolLabels: IFormOption[] = [
+    {
+        label: "โรงเรียนบ้านโคกอีด่ย | Koak E Doi School",
+        value: "Thailand",
+    },
+    {
+        label: "โรงเรียนบ้านโคกอีด่ย | Koak E Doi School",
+        value: "Thailand",
+    },
+];
+
+const passwordCheckList: string[] = [
+    "ขั้นต่ำ 8 ตัวอักษร",
+    "อักขระพิมพ์ใหญ่",
+    "อักขระพิมพ์เล็ก",
+    "ตัวเลข (0-9)",
+    "ตัวอักษรพิเศษ (@$!%*#?&^._-=)",
+    "ไม่มีช่องว่าง",
+];
+
+export {
+    registerStepperList,
+    selectCountryLabels,
+    selectVerificationType,
+    selectSchoolLabels,
+    passwordCheckList,
+};

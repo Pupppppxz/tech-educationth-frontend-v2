@@ -8,7 +8,7 @@ function RegisterStepper() {
     const t = useTranslations("AUTH.REGISTER");
     const currentStep = 0;
     return (
-        <div className="w-full h-full flex flex-col justify-between py-8 border-r border-main-dark-blue">
+        <div className="hidden w-full h-full lg:flex flex-col justify-between py-8 border-r border-main-dark-blue">
             {registerStepperList?.map((item, index) => (
                 <div
                     key={`${item.title}-${item.description}`}

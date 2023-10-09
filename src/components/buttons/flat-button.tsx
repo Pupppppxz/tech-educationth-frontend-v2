@@ -10,7 +10,7 @@ function FlatButton({
 }: IButton) {
     const themeBuilder = (t: string): string => {
         if (t === "white") {
-            return "bg-white border-white";
+            return "bg-white duration-[1500ms] hover:bg-main-dark-blue border-main-dark-blue";
         }
 
         if (t === "blue") {
@@ -56,13 +56,13 @@ function FlatButton({
         >
             <div
                 className={cn(
-                    "absolute z-40 top-0 -left-[100%] w-full h-full transition-all duration-500 group-hover:left-0",
+                    "absolute z-20 top-0 -left-[100%] w-full h-full transition-all duration-500 group-hover:left-0",
                     hoverBuilder(theme)
                 )}
             />
             <span
                 className={cn(
-                    "z-[41] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full",
+                    "z-[21] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full",
                     textBuilder(theme),
                     titleClassName
                 )}

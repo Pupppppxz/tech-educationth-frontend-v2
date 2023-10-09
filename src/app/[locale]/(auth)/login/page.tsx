@@ -1,6 +1,6 @@
 "use client";
 
-import { Formik } from "formik";
+import { Form, Formik } from "formik";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -36,7 +36,7 @@ function Login() {
                         router.push("/forgot-password");
                     }}
                 >
-                    <div className="w-full flex flex-col gap-y-4 mt-6">
+                    <Form className="w-full flex flex-col gap-y-4 mt-6">
                         <InputIconField
                             id="login-username"
                             name="username"
@@ -75,7 +75,7 @@ function Login() {
                         >
                             {t("registerButton")}
                         </Link>
-                    </div>
+                    </Form>
                 </Formik>
             </div>
         </div>

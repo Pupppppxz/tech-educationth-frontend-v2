@@ -86,7 +86,7 @@ function AuthNavbar() {
                             >
                                 <li
                                     className={cn(
-                                        "w-fit text-main-dark-blue cursor-pointer",
+                                        "w-fit text-main-dark-blue cursor-pointer font-semibold",
                                         isOpen && "text-white"
                                     )}
                                 >

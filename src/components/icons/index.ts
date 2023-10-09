@@ -22,6 +22,7 @@ import WorldNoHoverIcon from "./world-nohover";
 import SchoolNoHoverIcon from "./school-nohover";
 import UserInfoNoHoverIcon from "./user-info-nohover";
 import LockNoHoverIcon from "./lock-nohover";
+import CheckOutLineNoHoverIcon from "./check-outline-nohover";
 
 export {
     HomeIcon,
@@ -48,4 +49,5 @@ export {
     SchoolNoHoverIcon,
     UserInfoNoHoverIcon,
     LockNoHoverIcon,
+    CheckOutLineNoHoverIcon,
 };

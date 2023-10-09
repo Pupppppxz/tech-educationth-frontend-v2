@@ -11,6 +11,7 @@ import { RenderError } from "./error";
 type InputIconFieldProps = FieldAttributes<unknown> & {
     label?: string;
     labelClassName?: ClassValue;
+    isPassword?: boolean;
     icon: (params: IHoverIcon) => JSX.Element;
     iconClassName?: ClassValue;
     onTransformInput?: (value: FormChangeProps) => string;
@@ -27,10 +28,13 @@ function InputIconField({
     onTransformInput,
     icon: Icon,
     handleChange,
+    // isPassword = false,
     ...props
 }: InputIconFieldProps) {
     const [, , helper] = useField(name);
     const { setValue } = helper;
+    // const [show, setShow] = useState(() => isPassword === false);
+
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         if (onTransformInput) {
             const changed = onTransformInput(event.target.value);
@@ -57,7 +61,12 @@ function InputIconField({
                         {label}
                     </label>
                 ) : null}
-                <div className="grid grid-cols-[50px_1fr] w-full rounded-lg border-2 border-black">
+                <div
+                    className={cn(
+                        "grid grid-cols-[50px_1fr] w-full rounded-lg border-2 border-black"
+                        // isPassword && "relative"
+                    )}
+                >
                     <div className="flex w-full justify-center items-center">
                         <Icon className={iconClassName} />
                     </div>
